@@ -1,0 +1,18 @@
+pipeline {
+    agent any 
+
+    stages {
+        stage('Start') {
+            steps { 
+                echo "Engine start"
+            }
+        }
+        
+        stage('Off') { 
+            steps { 
+                echo "Engine off"
+            }
+        }
+    }
+}
+
