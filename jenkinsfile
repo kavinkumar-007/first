@@ -1,50 +1,30 @@
 pipeline {
-    agent any  // Runs on any available agent
+    agent any
 
     tools {
-        maven 'maven'  // Ensure 'maven' is configured in Jenkins Global Tool Configuration
-        jdk 'JDK11'  // Ensure JDK is installed and configured
+        maven 'Maven_3.8'  // Ensure Jenkins has this tool configured
     }
 
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/kavinkumar-007/first.git'
+                git branch: 'maven', url: 'https://github.com/kavinkumar-007/first.git'
             }
         }
-
         stage('Build') {
             steps {
-                sh 'mvn clean package'  // Build the project
+                sh 'mvn clean package'
             }
         }
-
         stage('Test') {
             steps {
-                sh 'mvn test'  // Run unit tests
+                sh 'mvn test'
             }
         }
-
-        stage('Archive Artifacts') {
-            steps {
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
-            }
-        }
-
         stage('Deploy') {
             steps {
-                echo "Deploying the application..."  
-                // Add deployment steps (e.g., SCP, Docker, Kubernetes, etc.)
+                echo "Deploy step (modify as needed)"
             }
-        }
-    }
-
-    post {
-        success {
-            echo 'Build and Deployment Successful!'
-        }
-        failure {
-            echo 'Build Failed! Check logs for details.'
         }
     }
 }
