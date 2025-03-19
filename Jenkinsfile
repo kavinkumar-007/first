@@ -1,9 +1,16 @@
-pipeline
- {
+pipeline {
     agent any  // Runs on any available agent
 
     tools {
         maven 'Maven3'  // Ensure Maven is configured in Jenkins
+    }
+
+    environment {
+        IMAGE_NAME = 'maven'
+        IMAGE_TAG = 'latest'
+        CONTAINER_NAME = 'maven-container'
+        DOCKERFILE_PATH = './my-java-app/Dockerfile'  // Specify the Dockerfile path  
+        
     }
 
     stages {
@@ -15,7 +22,7 @@ pipeline
 
         stage('Build with Maven') {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn clean package -DskipTests'
             }
         }
 
@@ -25,12 +32,29 @@ pipeline
             }
         }
 
-        stage('Deploy') {
+        stage('Build Docker Image') {
             steps {
-                echo 'Deploying application...'
-                // Add deployment commands here
+                sh "docker build -t $IMAGE_NAME:$IMAGE_TAG -f $DOCKERFILE_PATH ."
+            }
+        }
+
+        stage('Deploy Container') {
+            steps {
+                script {
+                    sh """
+                        docker run -d --name $CONTAINER_NAME -p 8080:8080 $IMAGE_NAME:$IMAGE_TAG
+                    """
+                }
             }
         }
     }
-}
 
+    post {
+        success {
+            echo 'Deployment successful!'
+        }
+        failure {
+            echo 'Build or deployment failed!'
+        }
+    }
+}
