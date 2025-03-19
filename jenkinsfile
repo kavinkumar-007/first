@@ -1,34 +1,11 @@
-pipeline {
-    agent any  // Runs on any available agent
+# Use an official OpenJDK runtime as base image
+FROM openjdk:17-jdk-slim
 
-    tools {
-        maven 'Maven3'  // Ensure Maven is configured in Jenkins
-    }
+# Set the working directory inside the container
+WORKDIR /app
 
-    stages {
-        stage('Checkout Code') {
-            steps {
-                git branch: 'test', url: 'https://github.com/kavinkumar-007/first.git'
-            }
-        }
+# Copy the built JAR file from the target directory to the container
+COPY target/my-java-app-1.0-SNAPSHOT.jar app.jar
 
-        stage('Build with Maven') {
-            steps {
-                sh 'mvn clean package'
-            }
-        }
-
-        stage('Run Tests') {
-            steps {
-                sh 'mvn test'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying application...'
-                // Add deployment commands here
-            }
-        }
-    }
-}
+# Command to run the application
+CMD ["java", "-jar", "app.jar"]
