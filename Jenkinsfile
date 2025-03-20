@@ -39,24 +39,14 @@ pipeline {
                 sh "docker build -t $IMAGE_NAME:$IMAGE_TAG -f $DOCKERFILE_PATH ."
             }
         }
-
-        stage('Deploy Container') {
-            steps {
-                script {
-                    sh """
-                        docker run -d --name $CONTAINER_NAME -p 8080:8080 $IMAGE_NAME:$IMAGE_TAG
-                    """
-                }
-            }
-        }
     }
 
     post {
         success {
-            echo 'Deployment successful!'
+            echo 'Image upload successful!'
         }
         failure {
-            echo 'Build or deployment failed!'
+            echo 'Image failed!'
         }
     }
 }
