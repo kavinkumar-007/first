@@ -1,0 +1,68 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Asia/Kolkata
+X-LIC-LOCATION:Asia/Kolkata
+BEGIN:STANDARD
+TZOFFSETFROM:+0530
+TZOFFSETTO:+0530
+TZNAME:GMT+5:30
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Kolkata:20241203T170000
+DTEND;TZID=Asia/Kolkata:20241203T173000
+DTSTAMP:20241203T072825Z
+ORGANIZER;CN=Giriprasath Botharaj:mailto:giriprasath.botharaj@vvdntech.in
+UID:799gl96n24qak73fua4586bcsk@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Abdul Kadhar;X-NUM-GUESTS=0:mailto:abdul.kadhar@vvdntech.in
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Velmurugan Sundararajan;X-NUM-GUESTS=0:mailto:velmurugan.s@vvdntech
+ .in
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Mohamed Farith P;X-NUM-GUESTS=0:mailto:mohamedfarith.p@vvdntech.in
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Antony Kavin Kumar;X-NUM-GUESTS=0:mailto:antony.kumar@vvdntech.in
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Siddharthraju Kannan;X-NUM-GUESTS=0:mailto:siddharthraju.kannan@vvd
+ ntech.in
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Sakthi Adithya Kumarasamy;X-NUM-GUESTS=0:mailto:sakthiadithya.k@vvd
+ ntech.in
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Danush Kumar R;X-NUM-GUESTS=0:mailto:danushkumar.r@vvdntech.in
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Vengatesh Kumar;X-NUM-GUESTS=0:mailto:vengatesh.kumar@vvdntech.in
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Aswinth Kumar R;X-NUM-GUESTS=0:mailto:aswinthkumar.r@vvdntech.in
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Vasantheeswaran S;X-NUM-GUESTS=0:mailto:vasantheeswaran.s@vvdntech.
+ in
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=Giriprasath Botharaj;X-NUM-GUESTS=0:mailto:giriprasath.botharaj@vvdntec
+ h.in
+X-GOOGLE-CONFERENCE:https://meet.google.com/dyv-svob-mfn
+X-MICROSOFT-CDO-OWNERAPPTID:-856767930
+CREATED:20241203T072823Z
+DESCRIPTION:A status review call to discuss the current progress\, identify
+  roadblocks\, and align on upcoming tasks and priorities\n\n-::~:~::~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nJ
+ oin with Google Meet: https://meet.google.com/dyv-svob-mfn\nOr dial: (US) +
+ 1 405-561-2849 PIN: 666583571#\nMore phone numbers: https://tel.meet/dyv-sv
+ ob-mfn?pin=8231282071634&hs=7\n\nLearn more about Meet at: https://support.
+ google.com/a/users/answer/9282720\n\nPlease do not edit this section.\n-::~
+ :~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ ::~:~::-
+LAST-MODIFIED:20241203T072823Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Progress Update and Status Review
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
